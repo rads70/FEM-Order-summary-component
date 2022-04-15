@@ -1,0 +1,146 @@
+:root {
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+  --hover-color: rgb(94, 82, 226);
+}
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  font-size: 62.5%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+h1,
+h2 {
+  color: var(--dark-blue);
+}
+
+h1 {
+  font-weight: 900;
+}
+h2 {
+  font-weight: 700;
+}
+
+.wrapper {
+  max-width: 1440px;
+  background-image: url(./images/pattern-background-desktop.svg);
+  background-repeat: no-repeat;
+  background-color: var(--pale-blue);
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 375px) {
+  .wrapper {
+    background-image: url(./images/pattern-background-mobile.svg);
+  }
+}
+
+.card {
+  width: 375px;
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px -10px hsl(225, 100%, 85%);
+}
+
+.card__hero img {
+  width: 100%;
+}
+
+.card__content {
+  padding: 4rem;
+  text-align: center;
+}
+.card__content h1 {
+  margin-top: 0;
+}
+
+.card__content p {
+  color: var(--desaturated-blue);
+  margin-bottom: 2rem;
+}
+
+.plan-container {
+  display: flex;
+  align-items: center;
+  padding: 1.5rem;
+  border-radius: 10px;
+  background: var(--very-pale-blue);
+  margin-bottom: 2rem;
+}
+.plan__block {
+  display: flex;
+  width: 100%;
+}
+.plan__block h2 {
+  margin: 0;
+  font-size: 1.6rem;
+}
+.plan__block img {
+  height: 100%;
+  margin-right: 2rem;
+}
+.plan__block p {
+  margin-bottom: 0;
+  margin-top: 0.5rem;
+}
+.plan__link {
+  flex: 1;
+  align-self: center;
+  text-align: right;
+  font-weight: 700;
+  color: var(--bright-blue);
+}
+.plan__link:hover {
+  color: var(--hover-color);
+  text-decoration: none;
+}
+
+.btn {
+  width: 100%;
+  color: white;
+  background-color: var(--bright-blue);
+  border-radius: 10px;
+  padding: 1.5rem;
+  border: 1px solid var(--bright-blue);
+  box-shadow: 0 10px 20px -10px var(--hover-color);
+  margin-bottom: 2rem;
+  cursor: pointer;
+}
+.btn:hover {
+  border-color: var(--hover-color);
+  background-color: var(--hover-color);
+}
+.cancel__link {
+  color: var(--desaturated-blue);
+  text-decoration: none;
+  cursor: pointer;
+}
+.cancel__link:hover {
+  color: var(--dark-blue);
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
